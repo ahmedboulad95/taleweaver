@@ -23,7 +23,7 @@
 		C49C4773259CF4C6009E6610 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49C4772259CF4C6009E6610 /* ModelData.swift */; };
 		C49C4778259CF70B009E6610 /* characterData.json in Resources */ = {isa = PBXBuildFile; fileRef = C49C4777259CF70B009E6610 /* characterData.json */; };
 		C49C478F259CFC95009E6610 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49C478E259CFC95009E6610 /* CharacterListView.swift */; };
-		C4DB632B259C400400A03907 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB632A259C400400A03907 /* CharacterView.swift */; };
+		C49C4797259D5B44009E6610 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49C4796259D5B44009E6610 /* CharacterDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,7 @@
 		C49C4772259CF4C6009E6610 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		C49C4777259CF70B009E6610 /* characterData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = characterData.json; sourceTree = "<group>"; };
 		C49C478E259CFC95009E6610 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
-		C4DB632A259C400400A03907 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		C49C4796259D5B44009E6610 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,9 +165,9 @@
 				C42BA0B0259BCD20009CFAD2 /* CanvasView.swift */,
 				C42BA0B5259BCE12009CFAD2 /* InspectorView.swift */,
 				C42BA0BA259C3E62009CFAD2 /* OutlineView.swift */,
-				C4DB632A259C400400A03907 /* CharacterView.swift */,
 				C49C476D259CF3F5009E6610 /* CharacterTileView.swift */,
 				C49C478E259CFC95009E6610 /* CharacterListView.swift */,
+				C49C4796259D5B44009E6610 /* CharacterDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -322,13 +322,13 @@
 				C49C476E259CF3F5009E6610 /* CharacterTileView.swift in Sources */,
 				C42BA09F259BC0A7009CFAD2 /* Character.swift in Sources */,
 				C42BA071259BC03F009CFAD2 /* ContentView.swift in Sources */,
+				C49C4797259D5B44009E6610 /* CharacterDetailView.swift in Sources */,
 				C42BA0B1259BCD20009CFAD2 /* CanvasView.swift in Sources */,
 				C42BA0A7259BCBAA009CFAD2 /* ToolboxView.swift in Sources */,
 				C42BA0B6259BCE12009CFAD2 /* InspectorView.swift in Sources */,
 				C49C478F259CFC95009E6610 /* CharacterListView.swift in Sources */,
 				C42BA06F259BC03F009CFAD2 /* taleweaverApp.swift in Sources */,
 				C49C4773259CF4C6009E6610 /* ModelData.swift in Sources */,
-				C4DB632B259C400400A03907 /* CharacterView.swift in Sources */,
 				C42BA0AC259BCBE3009CFAD2 /* ToolboxElementView.swift in Sources */,
 				C42BA0BB259C3E62009CFAD2 /* OutlineView.swift in Sources */,
 			);

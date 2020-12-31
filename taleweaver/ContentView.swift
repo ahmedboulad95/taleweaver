@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-                CharacterView()
+                CharacterListView()
                     .tabItem {
                         Text("Characters")
                     }.tag(1)

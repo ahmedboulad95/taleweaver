@@ -22,4 +22,8 @@ struct Character: Hashable, Codable, Identifiable {
     func getName() -> String {
         return "\(self.firstName) \(self.lastName)"
     }
+    
+    func getAge() -> Int {
+        return self.age
+    }
 }

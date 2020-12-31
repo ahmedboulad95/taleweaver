@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CharacterListView: View {
+    @State private var showDetail = false
+    
     let layout = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -16,15 +18,15 @@ struct CharacterListView: View {
     ]
     
     var body: some View {
-        /*List(characters) { character in
-            CharacterTileView(character: character)
-        }*/
-        LazyVGrid(columns: layout, spacing: 20) {
-            ForEach(characters, id: \.self) { character in
-                CharacterTileView(character: character)
+        NavigationView {
+            List(characters) { character in
+                NavigationLink(destination: CharacterDetailView(character: character)) {
+                    CharacterTileView(character: character)
+                }
+                .frame(alignment: .center)
             }
         }
-        .padding(.horizontal)
+        .navigationTitle("Characters")
     }
 }
 
