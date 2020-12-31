@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "firstName": "Rick",
+        "lastName": "Sanchez",
+        "age": 62,
+        "imageName": "rick_sanchez"
+    },
+    {
+        "id": 2,
+        "firstName": "Morty",
+        "lastName": "Smith",
+        "age": 14,
+        "imageName": "morty_smith"
+    },
+    {
+        "id": 3,
+        "firstName": "Jerry",
+        "lastName": "Smith",
+        "age": 43,
+        "imageName": "jerry_smith"
+    },
+    {
+        "id": 4,
+        "firstName": "Beth",
+        "lastName": "Smith",
+        "age": 42,
+        "imageName": "beth_smith"
+    },
+    {
+        "id": 5,
+        "firstName": "Summer",
+        "lastName": "Smith",
+        "age": 17,
+        "imageName": "summer_smith"
+    },
+    {
+        "id": 6,
+        "firstName": "Mr.",
+        "lastName": "PoopyButtHole",
+        "age": 14,
+        "imageName": "mr_poopybutthole"
+    }
+]
