@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct CharacterListView: View {
-    @State private var showDetail = false
-    
     let layout = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -18,15 +16,28 @@ struct CharacterListView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            List(characters) { character in
-                NavigationLink(destination: CharacterDetailView(character: character)) {
-                    CharacterTileView(character: character)
+        VStack {
+            NavigationView {
+                VStack {
+                    NavigationLink(destination: AddCharacterView()) {
+                            Image(systemName: "plus")
+                                .resizable()
+                                .padding(6)
+                                .frame(width: 24, height: 24)
+                                .background(Color.blue)
+                                .clipShape(RoundedRectangle(cornerRadius: 5))
+                                .foregroundColor(.white)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    List(characters) { character in
+                        NavigationLink(destination: CharacterDetailView(character: character)) {
+                            CharacterTileView(character: character)
+                        }
+                    }
                 }
-                .frame(alignment: .center)
             }
+            .navigationTitle("Characters")
         }
-        .navigationTitle("Characters")
     }
 }
 

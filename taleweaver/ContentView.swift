@@ -13,7 +13,7 @@ struct ContentView: View {
             TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
                 CharacterListView()
                     .tabItem {
-                        Text("Characters")
+                        Text("Character Index")
                     }.tag(1)
                 OutlineView()
                     .tabItem {
