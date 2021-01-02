@@ -10,11 +10,15 @@ import Foundation
 var characters: [Character] = load("characterData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
+    guard let folder = FileFetcher.getSupportFolder() else {
+        fatalError("Couldn't open support folder")
+    }
+    
+    let filePath = "\(folder.path)/\(filename)"
+    
     let data: Data
     
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil) else {
-        fatalError("Couldn't find \(filename) in main bundle.")
-    }
+    let file = NSURL.fileURL(withPath: filePath)
     
     do {
         data = try Data(contentsOf: file)

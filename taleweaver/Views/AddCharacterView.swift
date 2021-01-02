@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct AddCharacterView: View {
+    @State var character: Character = Character()
+    
     var body: some View {
         VStack {
             ImagePickerView()
+            TextField("First Name", text: $character.firstName)
+            TextField("Last Name", text: $character.lastName)
         }
     }
 }

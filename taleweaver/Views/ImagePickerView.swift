@@ -20,19 +20,21 @@ struct ImagePickerView: View {
             openPanel.begin { (result) -> Void in
                 if result.rawValue == NSApplication.ModalResponse.OK.rawValue {
                     let sourceUrl = openPanel.url!
+                    let imageData = try? Data(contentsOf: sourceUrl)
                     let filename = (sourceUrl.path as NSString).lastPathComponent
-                    let destUrl = NSURL.fileURL(withPath: "/Volumes/RAVPOWER /Projects/taleweaver/taleweaver/Resources/img/\(filename)")
-                    do {
-                        print(String(destUrl.startAccessingSecurityScopedResource()))
-                        if sourceUrl.startAccessingSecurityScopedResource() {
-                            try FileManager.default.copyItem(at: sourceUrl, to: destUrl)
-                            sourceUrl.stopAccessingSecurityScopedResource()
-                        } else {
-                            print("Not accessing \(sourceUrl.path)")
+
+                    let supportFolder = FileFetcher.getSupportFolder()
+                    
+                    if let fullDestPath = supportFolder?.appendingPathComponent(filename), let data = imageData {
+                        do {
+                            print("Destination Path :: \(fullDestPath.path)")
+                            try data.write(to: fullDestPath, options: .atomic)
+                            
+                            let newCharacter = Character(firstName: "Mr", lastName: "Meeseeks", age: 100, imageName: filename)
+                            FileFetcher.addCharacter(newCharacter: newCharacter)
+                        } catch let error {
+                            print("Error :: \(error)")
                         }
-                        
-                    } catch (let error) {
-                        print("Cannot copy item at \(sourceUrl.path) to \(destUrl.path): \(error)")
                     }
                 }
             }

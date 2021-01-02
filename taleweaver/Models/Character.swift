@@ -14,9 +14,33 @@ struct Character: Hashable, Codable, Identifiable {
     var lastName: String
     var age: Int
     
-    private var imageName: String
+    var imageName: String
     var image: Image {
-        Image(imageName)
+        let supportFolder = FileFetcher.getSupportFolder()
+        if let folder = supportFolder {
+            let img = NSImage(byReferencingFile: "\(folder.path)/\(imageName)")
+            if let image = img {
+                return Image(nsImage: image)
+            }
+        }
+        
+        return Image("default_character_portrait")
+    }
+    
+    init() {
+        self.id = characters[characters.count-1].id + 1
+        self.firstName = ""
+        self.lastName = ""
+        self.age = -1
+        self.imageName = ""
+    }
+    
+    init(firstName: String, lastName: String, age: Int, imageName: String) {
+        self.id = characters[characters.count-1].id + 1
+        self.firstName = firstName
+        self.lastName = lastName
+        self.age = age
+        self.imageName = imageName
     }
     
     func getName() -> String {
