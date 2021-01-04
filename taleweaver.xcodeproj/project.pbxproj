@@ -21,6 +21,8 @@
 		C42BA0BB259C3E62009CFAD2 /* OutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42BA0BA259C3E62009CFAD2 /* OutlineView.swift */; };
 		C44FDBAE259E6E160008D7E2 /* AddCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FDBAD259E6E160008D7E2 /* AddCharacterView.swift */; };
 		C44FDBB3259E703C0008D7E2 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FDBB2259E703C0008D7E2 /* ImagePickerView.swift */; };
+		C456AB4125A2666E001D8077 /* Tale.swift in Sources */ = {isa = PBXBuildFile; fileRef = C456AB4025A2666E001D8077 /* Tale.swift */; };
+		C456AB4625A268DD001D8077 /* TaleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C456AB4525A268DD001D8077 /* TaleLoader.swift */; };
 		C47538FC25A0155D008C86D7 /* FileFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47538FB25A0155D008C86D7 /* FileFetcher.swift */; };
 		C49C476E259CF3F5009E6610 /* CharacterTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49C476D259CF3F5009E6610 /* CharacterTileView.swift */; };
 		C49C4773259CF4C6009E6610 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49C4772259CF4C6009E6610 /* ModelData.swift */; };
@@ -67,6 +69,8 @@
 		C42BA0BA259C3E62009CFAD2 /* OutlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineView.swift; sourceTree = "<group>"; };
 		C44FDBAD259E6E160008D7E2 /* AddCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCharacterView.swift; sourceTree = "<group>"; };
 		C44FDBB2259E703C0008D7E2 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		C456AB4025A2666E001D8077 /* Tale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tale.swift; sourceTree = "<group>"; };
+		C456AB4525A268DD001D8077 /* TaleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaleLoader.swift; sourceTree = "<group>"; };
 		C47538FB25A0155D008C86D7 /* FileFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileFetcher.swift; sourceTree = "<group>"; };
 		C49C476D259CF3F5009E6610 /* CharacterTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTileView.swift; sourceTree = "<group>"; };
 		C49C4772259CF4C6009E6610 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 		C47538FA25A01522008C86D7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C456AB4525A268DD001D8077 /* TaleLoader.swift */,
 				C47538FB25A0155D008C86D7 /* FileFetcher.swift */,
 			);
 			path = Utilities;
@@ -191,6 +196,7 @@
 			children = (
 				C42BA09E259BC0A7009CFAD2 /* Character.swift */,
 				C49C4772259CF4C6009E6610 /* ModelData.swift */,
+				C456AB4025A2666E001D8077 /* Tale.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -330,11 +336,13 @@
 				C49C4797259D5B44009E6610 /* CharacterDetailView.swift in Sources */,
 				C44FDBB3259E703C0008D7E2 /* ImagePickerView.swift in Sources */,
 				C42BA0B1259BCD20009CFAD2 /* CanvasView.swift in Sources */,
+				C456AB4625A268DD001D8077 /* TaleLoader.swift in Sources */,
 				C42BA0A7259BCBAA009CFAD2 /* ToolboxView.swift in Sources */,
 				C42BA0B6259BCE12009CFAD2 /* InspectorView.swift in Sources */,
 				C49C478F259CFC95009E6610 /* CharacterListView.swift in Sources */,
 				C42BA06F259BC03F009CFAD2 /* taleweaverApp.swift in Sources */,
 				C49C4773259CF4C6009E6610 /* ModelData.swift in Sources */,
+				C456AB4125A2666E001D8077 /* Tale.swift in Sources */,
 				C42BA0AC259BCBE3009CFAD2 /* ToolboxElementView.swift in Sources */,
 				C44FDBAE259E6E160008D7E2 /* AddCharacterView.swift in Sources */,
 				C42BA0BB259C3E62009CFAD2 /* OutlineView.swift in Sources */,
