@@ -7,8 +7,14 @@
 
 import SwiftUI
 
+var tale: Tale?
+
 @main
 struct taleweaverApp: App {
+    init() {
+        tale = TaleLoader.loadTale(name: "tale2")
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

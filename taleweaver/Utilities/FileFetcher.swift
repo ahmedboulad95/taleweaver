@@ -13,19 +13,23 @@ struct FileFetcher {
     }
     
     static func addCharacter(newCharacter: Character) {
-        tale.characters.append(newCharacter)
+        guard var currentTale = tale else {
+            fatalError("No tale set")
+        }
+        
+        currentTale.characters.append(newCharacter)
         
         do {
-            let filename = "characterData.json"
+            let talePath = "taledata/\(currentTale.name).json"
             guard let folder = FileFetcher.getSupportFolder() else {
                 fatalError("Couldn't get support folder")
             }
             
-            let filePath = "\(folder.path)/\(filename)"
+            let filePath = "\(folder.path)/\(talePath)"
             let file = NSURL.fileURL(withPath: filePath)
             
             let encoder = JSONEncoder()
-            try encoder.encode(tale).write(to: file)
+            try encoder.encode(currentTale).write(to: file)
         } catch let error {
             print("Error :: \(error)")
         }

@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct CharacterListView: View {
+    var characters: [Character] = []
+    
+    init() {
+        if let currentTale = tale {
+            self.characters = currentTale.characters
+        }
+    }
+    
     var body: some View {
         VStack {
             NavigationView {
@@ -22,7 +30,7 @@ struct CharacterListView: View {
                             .foregroundColor(.white)
                     }
                     .buttonStyle(PlainButtonStyle())
-                    List(tale.characters) { character in
+                    List(self.characters) { character in
                         NavigationLink(destination: CharacterDetailView(character: character)) {
                             CharacterTileView(character: character)
                         }

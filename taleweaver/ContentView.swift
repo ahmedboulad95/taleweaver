@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    var tale: Tale = TaleLoader.loadTale(name: "tale1")
-
     var body: some View {
         VStack {
             TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {

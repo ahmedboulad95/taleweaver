@@ -10,6 +10,7 @@ import AppKit
 
 struct ImagePickerView: View {
     var fileSelectHandler: (NSApplication.ModalResponse?, NSOpenPanel?) -> Void
+    var character: Character?
     
     var body: some View {
         Button(action: {
@@ -23,10 +24,17 @@ struct ImagePickerView: View {
                 self.fileSelectHandler(result, openPanel)
             })
         }) {
-            Image("default_character_portrait")
-                .renderingMode(.original)
-                .resizable()
-                .frame(width: 200, height: 200, alignment: .center)
+            if let newCharacter = character {
+                newCharacter.image
+                    .renderingMode(.original)
+                    .resizable()
+                    .frame(width: 200, height: 200, alignment: .center)
+            } else {
+                Image("default_character_portrait")
+                    .renderingMode(.original)
+                    .resizable()
+                    .frame(width: 200, height: 200, alignment: .center)
+            }
         }
         .buttonStyle(PlainButtonStyle())
         .frame(width: 200, height: 200, alignment: .center)

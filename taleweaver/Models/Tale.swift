@@ -9,5 +9,6 @@ import Foundation
 
 struct Tale: Hashable, Codable, Identifiable {
     var id: Int
+    var name: String
     var characters: [Character]
 }

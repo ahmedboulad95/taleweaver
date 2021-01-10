@@ -12,7 +12,7 @@ struct AddCharacterView: View {
     
     var body: some View {
         VStack {
-            ImagePickerView(fileSelectHandler: handleImageSelect)
+            ImagePickerView(fileSelectHandler: handleImageSelect, character: self.character)
             TextField("First Name", text: $character.firstName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .fixedSize()
@@ -73,6 +73,7 @@ struct AddCharacterView: View {
     
     func createNewCharacter() {
         FileFetcher.addCharacter(newCharacter: self.character)
+        self.character = Character()
     }
 }
 

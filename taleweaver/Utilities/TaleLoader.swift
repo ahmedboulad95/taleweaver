@@ -7,7 +7,7 @@
 
 import Foundation
 
-var tale: Tale = TaleLoader.loadTale(name: "tale2")
+//var tale: Tale = TaleLoader.loadTale(name: "tale2")
 
 struct TaleLoader {
     static func loadTale<T: Decodable>(name taleName: String) -> T {
