@@ -12,7 +12,7 @@ struct AddCharacterView: View {
     
     var body: some View {
         VStack {
-            ImagePickerView()
+            ImagePickerView(fileSelectHandler: handleImageSelect)
             TextField("First Name", text: $character.firstName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .fixedSize()
@@ -38,8 +38,41 @@ struct AddCharacterView: View {
         }
     }
     
-    func createNewCharacter() {
+    func handleImageSelect(result: NSApplication.ModalResponse?, openPanel: NSOpenPanel?) {
+        if let response = result {
+            if response.rawValue == NSApplication.ModalResponse.OK.rawValue {
+                if let panel = openPanel {
+                    let sourceUrl = panel.url!
+                    let filename = (sourceUrl.path as NSString).lastPathComponent
+                    
+                    setCharacterImagePath(imagePath: filename)
+                    copyImageToSupportFolder(fileUrl: sourceUrl)
+                }
+            }
+        }
+    }
+    
+    func setCharacterImagePath(imagePath: String) {
+        self.character.imageName = imagePath
+    }
+    
+    func copyImageToSupportFolder(fileUrl: URL) {
+        let imageData = try? Data(contentsOf: fileUrl)
+        let supportFolder = FileFetcher.getSupportFolder()
+        let filename = (fileUrl.path as NSString).lastPathComponent
         
+        if let fullDestPath = supportFolder?.appendingPathComponent(filename), let data = imageData {
+            do {
+                print("Destination Path :: \(fullDestPath.path)")
+                try data.write(to: fullDestPath, options: .atomic)
+            } catch let error {
+                print("Error :: \(error)")
+            }
+        }
+    }
+    
+    func createNewCharacter() {
+        FileFetcher.addCharacter(newCharacter: self.character)
     }
 }
 
