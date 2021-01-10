@@ -12,15 +12,16 @@ struct Character: Hashable, Codable, Identifiable {
     var id: Int
     var firstName: String
     var lastName: String
-    var age: Int
+    var age: Int?
     
     var imageName: String
     var image: Image {
         let supportFolder = FileFetcher.getSupportFolder()
         if let folder = supportFolder {
-            let img = NSImage(byReferencingFile: "\(folder.path)/\(imageName)")
-            if let image = img {
-                return Image(nsImage: image)
+            if let image = NSImage(byReferencingFile: "\(folder.path)/\(imageName)") {
+                if image.isValid {
+                    return Image(nsImage: image)
+                }
             }
         }
         
@@ -28,15 +29,14 @@ struct Character: Hashable, Codable, Identifiable {
     }
     
     init() {
-        self.id = characters[characters.count-1].id + 1
+        self.id = tale.characters[tale.characters.count-1].id + 1
         self.firstName = ""
         self.lastName = ""
-        self.age = -1
         self.imageName = ""
     }
     
     init(firstName: String, lastName: String, age: Int, imageName: String) {
-        self.id = characters[characters.count-1].id + 1
+        self.id = tale.characters[tale.characters.count-1].id + 1
         self.firstName = firstName
         self.lastName = lastName
         self.age = age
@@ -47,7 +47,7 @@ struct Character: Hashable, Codable, Identifiable {
         return "\(self.firstName) \(self.lastName)"
     }
     
-    func getAge() -> Int {
+    func getAge() -> Int? {
         return self.age
     }
 }

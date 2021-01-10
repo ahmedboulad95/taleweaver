@@ -7,7 +7,7 @@
 
 import Foundation
 
-var characters: [Character] = load("characterData.json")
+//var characters: [Character] = load("characterData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     guard let folder = FileFetcher.getSupportFolder() else {

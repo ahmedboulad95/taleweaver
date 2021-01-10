@@ -17,9 +17,7 @@ struct CharacterDetailView: View {
                 .frame(width: 200, height: 200)
                 .padding()
             Text(character.getName())
-                .foregroundColor(Color.white)
-            Text("Age: \(String(character.getAge()))")
-                .foregroundColor(Color.white)
+            Text("Age: \(String(character.getAge()!))")
             Spacer()
             HStack {
                 Spacer()
@@ -30,6 +28,6 @@ struct CharacterDetailView: View {
 
 struct CharacterDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterDetailView(character: characters[0])
+        CharacterDetailView(character: tale.characters[0])
     }
 }

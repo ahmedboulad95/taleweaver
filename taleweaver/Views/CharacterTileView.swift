@@ -16,7 +16,6 @@ struct CharacterTileView: View {
                 .resizable()
                 .frame(width: 90, height: 90)
             Text(character.getName())
-                .foregroundColor(Color.white)
         }
         .frame(width: 100, height: 100)
         .padding()
@@ -26,8 +25,8 @@ struct CharacterTileView: View {
 struct CharacterTileView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            CharacterTileView(character: characters[0])
-            CharacterTileView(character: characters[1])
+            CharacterTileView(character: tale.characters[0])
+            CharacterTileView(character: tale.characters[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

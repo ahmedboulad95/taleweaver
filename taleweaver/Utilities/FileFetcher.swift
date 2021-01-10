@@ -13,7 +13,7 @@ struct FileFetcher {
     }
     
     static func addCharacter(newCharacter: Character) {
-        characters.append(newCharacter)
+        tale.characters.append(newCharacter)
         
         do {
             let filename = "characterData.json"
@@ -25,7 +25,7 @@ struct FileFetcher {
             let file = NSURL.fileURL(withPath: filePath)
             
             let encoder = JSONEncoder()
-            try encoder.encode(characters).write(to: file)
+            try encoder.encode(tale).write(to: file)
         } catch let error {
             print("Error :: \(error)")
         }

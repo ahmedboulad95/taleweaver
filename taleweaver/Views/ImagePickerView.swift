@@ -10,7 +10,7 @@ import AppKit
 
 struct ImagePickerView: View {
     var body: some View {
-        Button("Select File") {
+        Button(action: {
             let openPanel = NSOpenPanel()
             openPanel.prompt = "Select File"
             openPanel.allowsMultipleSelection = false
@@ -38,7 +38,14 @@ struct ImagePickerView: View {
                     }
                 }
             }
+        }) {
+            Image("default_character_portrait")
+                .renderingMode(.original)
+                .resizable()
+                .frame(width: 200, height: 200, alignment: .center)
         }
+        .buttonStyle(PlainButtonStyle())
+        .frame(width: 200, height: 200, alignment: .center)
     }
 }
 
