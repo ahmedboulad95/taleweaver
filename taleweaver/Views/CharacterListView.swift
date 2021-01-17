@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct CharacterListView: View {
-    var characters: [Character] = []
+    @ObservedObject var currentTale: Tale = Tale()
     
     init() {
         if let currentTale = tale {
-            self.characters = currentTale.characters
+            self.currentTale = currentTale
         }
     }
     
@@ -30,7 +30,7 @@ struct CharacterListView: View {
                             .foregroundColor(.white)
                     }
                     .buttonStyle(PlainButtonStyle())
-                    List(self.characters) { character in
+                    List(self.currentTale.characters) { character in
                         NavigationLink(destination: CharacterDetailView(character: character)) {
                             CharacterTileView(character: character)
                         }

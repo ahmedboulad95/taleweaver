@@ -13,7 +13,7 @@ struct FileFetcher {
     }
     
     static func addCharacter(newCharacter: Character) {
-        guard var currentTale = tale else {
+        guard let currentTale = tale else {
             fatalError("No tale set")
         }
         
@@ -30,6 +30,10 @@ struct FileFetcher {
             
             let encoder = JSONEncoder()
             try encoder.encode(currentTale).write(to: file)
+            
+            for character in currentTale.characters {
+                print("\(character.firstName) \(character.lastName)")
+            }
         } catch let error {
             print("Error :: \(error)")
         }
