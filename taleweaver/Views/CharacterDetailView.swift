@@ -14,7 +14,7 @@ struct CharacterDetailView: View {
         VStack {
             character.image
                 .resizable()
-                .frame(width: 200, height: 200)
+                .frame(width: 400, height: 400)
                 .padding()
             Text(character.getName())
             Text("Age: \(String(character.getAge() ?? 0))")

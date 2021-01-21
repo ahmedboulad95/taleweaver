@@ -25,9 +25,12 @@
 		C456AB4625A268DD001D8077 /* TaleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C456AB4525A268DD001D8077 /* TaleLoader.swift */; };
 		C47538FC25A0155D008C86D7 /* FileFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47538FB25A0155D008C86D7 /* FileFetcher.swift */; };
 		C49C476E259CF3F5009E6610 /* CharacterTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49C476D259CF3F5009E6610 /* CharacterTileView.swift */; };
-		C49C4773259CF4C6009E6610 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49C4772259CF4C6009E6610 /* ModelData.swift */; };
 		C49C478F259CFC95009E6610 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49C478E259CFC95009E6610 /* CharacterListView.swift */; };
 		C49C4797259D5B44009E6610 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49C4796259D5B44009E6610 /* CharacterDetailView.swift */; };
+		C4C3CE1A25B910930058CD15 /* PlotEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C3CE1925B910930058CD15 /* PlotEvent.swift */; };
+		C4C3CE1F25B9159F0058CD15 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C3CE1E25B9159F0058CD15 /* ImageLoader.swift */; };
+		C4C3CE2425B91A690058CD15 /* PlotEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C3CE2325B91A690058CD15 /* PlotEventView.swift */; };
+		C4C3CE2C25B91E920058CD15 /* CharacterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C3CE2B25B91E920058CD15 /* CharacterGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,9 +76,12 @@
 		C456AB4525A268DD001D8077 /* TaleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaleLoader.swift; sourceTree = "<group>"; };
 		C47538FB25A0155D008C86D7 /* FileFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileFetcher.swift; sourceTree = "<group>"; };
 		C49C476D259CF3F5009E6610 /* CharacterTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTileView.swift; sourceTree = "<group>"; };
-		C49C4772259CF4C6009E6610 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		C49C478E259CFC95009E6610 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		C49C4796259D5B44009E6610 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		C4C3CE1925B910930058CD15 /* PlotEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotEvent.swift; sourceTree = "<group>"; };
+		C4C3CE1E25B9159F0058CD15 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		C4C3CE2325B91A690058CD15 /* PlotEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotEventView.swift; sourceTree = "<group>"; };
+		C4C3CE2B25B91E920058CD15 /* CharacterGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +184,8 @@
 				C49C4796259D5B44009E6610 /* CharacterDetailView.swift */,
 				C44FDBAD259E6E160008D7E2 /* AddCharacterView.swift */,
 				C44FDBB2259E703C0008D7E2 /* ImagePickerView.swift */,
+				C4C3CE2325B91A690058CD15 /* PlotEventView.swift */,
+				C4C3CE2B25B91E920058CD15 /* CharacterGridView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 			children = (
 				C456AB4525A268DD001D8077 /* TaleLoader.swift */,
 				C47538FB25A0155D008C86D7 /* FileFetcher.swift */,
+				C4C3CE1E25B9159F0058CD15 /* ImageLoader.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -195,8 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				C42BA09E259BC0A7009CFAD2 /* Character.swift */,
-				C49C4772259CF4C6009E6610 /* ModelData.swift */,
 				C456AB4025A2666E001D8077 /* Tale.swift */,
+				C4C3CE1925B910930058CD15 /* PlotEvent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -331,8 +340,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C49C476E259CF3F5009E6610 /* CharacterTileView.swift in Sources */,
+				C4C3CE1A25B910930058CD15 /* PlotEvent.swift in Sources */,
 				C42BA09F259BC0A7009CFAD2 /* Character.swift in Sources */,
 				C42BA071259BC03F009CFAD2 /* ContentView.swift in Sources */,
+				C4C3CE2425B91A690058CD15 /* PlotEventView.swift in Sources */,
 				C49C4797259D5B44009E6610 /* CharacterDetailView.swift in Sources */,
 				C44FDBB3259E703C0008D7E2 /* ImagePickerView.swift in Sources */,
 				C42BA0B1259BCD20009CFAD2 /* CanvasView.swift in Sources */,
@@ -341,9 +352,10 @@
 				C42BA0B6259BCE12009CFAD2 /* InspectorView.swift in Sources */,
 				C49C478F259CFC95009E6610 /* CharacterListView.swift in Sources */,
 				C42BA06F259BC03F009CFAD2 /* taleweaverApp.swift in Sources */,
-				C49C4773259CF4C6009E6610 /* ModelData.swift in Sources */,
 				C456AB4125A2666E001D8077 /* Tale.swift in Sources */,
 				C42BA0AC259BCBE3009CFAD2 /* ToolboxElementView.swift in Sources */,
+				C4C3CE1F25B9159F0058CD15 /* ImageLoader.swift in Sources */,
+				C4C3CE2C25B91E920058CD15 /* CharacterGridView.swift in Sources */,
 				C44FDBAE259E6E160008D7E2 /* AddCharacterView.swift in Sources */,
 				C42BA0BB259C3E62009CFAD2 /* OutlineView.swift in Sources */,
 				C47538FC25A0155D008C86D7 /* FileFetcher.swift in Sources */,
@@ -595,6 +607,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmedboulad.taleweaverUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -614,6 +627,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmedboulad.taleweaverUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

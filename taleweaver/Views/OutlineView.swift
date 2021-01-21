@@ -10,23 +10,11 @@ import SwiftUI
 struct OutlineView: View {
     var body: some View {
         VStack {
-            VStack(alignment: .leading) {
-                Text("Turtle Rock")
-                    .font(.title)
-                HStack {
-                    Text("Joshua Tree National Park")
-                        .font(.subheadline)
-                    Spacer()
-                    Text("California")
-                        .font(.subheadline)
-                }
-            }
-            .padding()
-            Spacer()
             HStack {
-                ToolboxView()
+                /*ToolboxView()
                 CanvasView()
-                InspectorView()
+                InspectorView()*/
+                PlotEventView(event: tale!.events[0])
             }
         }
     }

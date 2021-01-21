@@ -16,16 +16,7 @@ struct Character: Hashable, Codable, Identifiable {
     
     var imageName: String?
     var image: Image {
-        let supportFolder = FileFetcher.getSupportFolder()
-        if let folder = supportFolder {
-            if let image = NSImage(byReferencingFile: "\(folder.path)/\(imageName!)") {
-                if image.isValid {
-                    return Image(nsImage: image)
-                }
-            }
-        }
-        
-        return Image("default_character_portrait")
+        return ImageLoader.loadFromSupportDir(path: self.imageName)
     }
     
     init() {

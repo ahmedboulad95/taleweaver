@@ -28,16 +28,16 @@ struct ImagePickerView: View {
                 newCharacter.image
                     .renderingMode(.original)
                     .resizable()
-                    .frame(width: 200, height: 200, alignment: .center)
+                    .frame(width: 400, height: 400, alignment: .center)
             } else {
                 Image("default_character_portrait")
                     .renderingMode(.original)
                     .resizable()
-                    .frame(width: 200, height: 200, alignment: .center)
+                    .frame(width: 400, height: 400, alignment: .center)
             }
         }
         .buttonStyle(PlainButtonStyle())
-        .frame(width: 200, height: 200, alignment: .center)
+        .frame(width: 400, height: 400, alignment: .center)
     }
 }
 
