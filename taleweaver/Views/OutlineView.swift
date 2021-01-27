@@ -9,14 +9,30 @@ import SwiftUI
 
 struct OutlineView: View {
     var body: some View {
-        VStack {
+        /*VStack {
             HStack {
-                /*ToolboxView()
-                CanvasView()
-                InspectorView()*/
                 PlotEventView(event: tale!.events[0])
             }
+        }*/
+        
+        /*NavigationView {
+            VStack {
+                List(tale!.events) { event in
+                    NavigationLink(destination: PlotEventView(event: event)) {
+                        event.image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 100, height: 80)
+                    }
+                    .padding()
+                }
+            }
         }
+        .navigationTitle("Events")*/
+        
+        let mesh = Mesh.sampleMesh()
+        let selection = SelectionHandler()
+        return SurfaceView(mesh: mesh, selection: selection)
     }
 }
 
