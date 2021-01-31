@@ -14,7 +14,6 @@
 		C41B915A25C105430000E5F7 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B915425C105420000E5F7 /* Edge.swift */; };
 		C41B915B25C105430000E5F7 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B915525C105430000E5F7 /* Node.swift */; };
 		C41B915C25C105430000E5F7 /* SelectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B915625C105430000E5F7 /* SelectionHandler.swift */; };
-		C41B916125C105520000E5F7 /* CGPoint+Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B916025C105520000E5F7 /* CGPoint+Help.swift */; };
 		C41B916625C107890000E5F7 /* EdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B916525C107890000E5F7 /* EdgeView.swift */; };
 		C41B916B25C109F70000E5F7 /* NodeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B916A25C109F70000E5F7 /* NodeMapView.swift */; };
 		C41B917025C10C390000E5F7 /* EdgeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B916F25C10C390000E5F7 /* EdgeMapView.swift */; };
@@ -32,6 +31,7 @@
 		C42BA0B1259BCD20009CFAD2 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42BA0B0259BCD20009CFAD2 /* CanvasView.swift */; };
 		C42BA0B6259BCE12009CFAD2 /* InspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42BA0B5259BCE12009CFAD2 /* InspectorView.swift */; };
 		C42BA0BB259C3E62009CFAD2 /* OutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42BA0BA259C3E62009CFAD2 /* OutlineView.swift */; };
+		C444C69E25C63BA400D35462 /* CGPoint+Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = C444C69D25C63BA400D35462 /* CGPoint+Help.swift */; };
 		C44FDBAE259E6E160008D7E2 /* AddCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FDBAD259E6E160008D7E2 /* AddCharacterView.swift */; };
 		C44FDBB3259E703C0008D7E2 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FDBB2259E703C0008D7E2 /* ImagePickerView.swift */; };
 		C456AB4125A2666E001D8077 /* Tale.swift in Sources */ = {isa = PBXBuildFile; fileRef = C456AB4025A2666E001D8077 /* Tale.swift */; };
@@ -71,7 +71,6 @@
 		C41B915425C105420000E5F7 /* Edge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
 		C41B915525C105430000E5F7 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		C41B915625C105430000E5F7 /* SelectionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionHandler.swift; sourceTree = "<group>"; };
-		C41B916025C105520000E5F7 /* CGPoint+Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGPoint+Help.swift"; path = "../../../RazeMindApp/starter/RazeMind/Help/CGPoint+Help.swift"; sourceTree = "<group>"; };
 		C41B916525C107890000E5F7 /* EdgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeView.swift; sourceTree = "<group>"; };
 		C41B916A25C109F70000E5F7 /* NodeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeMapView.swift; sourceTree = "<group>"; };
 		C41B916F25C10C390000E5F7 /* EdgeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeMapView.swift; sourceTree = "<group>"; };
@@ -96,6 +95,7 @@
 		C42BA0B0259BCD20009CFAD2 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		C42BA0B5259BCE12009CFAD2 /* InspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorView.swift; sourceTree = "<group>"; };
 		C42BA0BA259C3E62009CFAD2 /* OutlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineView.swift; sourceTree = "<group>"; };
+		C444C69D25C63BA400D35462 /* CGPoint+Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Help.swift"; sourceTree = "<group>"; };
 		C44FDBAD259E6E160008D7E2 /* AddCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCharacterView.swift; sourceTree = "<group>"; };
 		C44FDBB2259E703C0008D7E2 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		C456AB4025A2666E001D8077 /* Tale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tale.swift; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 			children = (
 				C41B915425C105420000E5F7 /* Edge.swift */,
 				C41B915125C105420000E5F7 /* Mesh.swift */,
-				C41B916025C105520000E5F7 /* CGPoint+Help.swift */,
+				C444C69D25C63BA400D35462 /* CGPoint+Help.swift */,
 				C41B915225C105420000E5F7 /* Mesh+Demo.swift */,
 				C41B915325C105420000E5F7 /* Mesh+MathHelp.swift */,
 				C41B915525C105430000E5F7 /* Node.swift */,
@@ -404,7 +404,6 @@
 				C42BA0B1259BCD20009CFAD2 /* CanvasView.swift in Sources */,
 				C456AB4625A268DD001D8077 /* TaleLoader.swift in Sources */,
 				C42BA0A7259BCBAA009CFAD2 /* ToolboxView.swift in Sources */,
-				C41B916125C105520000E5F7 /* CGPoint+Help.swift in Sources */,
 				C41B915C25C105430000E5F7 /* SelectionHandler.swift in Sources */,
 				C42BA0B6259BCE12009CFAD2 /* InspectorView.swift in Sources */,
 				C41B915725C105430000E5F7 /* Mesh.swift in Sources */,
@@ -417,6 +416,7 @@
 				C4C3CE2C25B91E920058CD15 /* CharacterGridView.swift in Sources */,
 				C44FDBAE259E6E160008D7E2 /* AddCharacterView.swift in Sources */,
 				C42BA0BB259C3E62009CFAD2 /* OutlineView.swift in Sources */,
+				C444C69E25C63BA400D35462 /* CGPoint+Help.swift in Sources */,
 				C47538FC25A0155D008C86D7 /* FileFetcher.swift in Sources */,
 				C41B915825C105430000E5F7 /* Mesh+Demo.swift in Sources */,
 			);
