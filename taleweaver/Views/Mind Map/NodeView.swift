@@ -17,9 +17,9 @@ struct NodeView: View {
     }
     
     var body: some View {
-        Ellipse()
+        RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
             .fill(Color.green)
-            .overlay(Ellipse()
+            .overlay(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                         .stroke(isSelected ? Color.red : Color.black, lineWidth: isSelected ? 5 : 3))
             .overlay(Text(node.text)
                         .multilineTextAlignment(.center)

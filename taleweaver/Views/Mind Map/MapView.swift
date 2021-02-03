@@ -13,7 +13,6 @@ struct MapView: View {
     
     var body: some View {
         ZStack {
-            Rectangle().fill(Color.orange)
             EdgeMapView(edges: $mesh.links)
             NodeMapView(selection: selection, nodes: $mesh.nodes)
         }

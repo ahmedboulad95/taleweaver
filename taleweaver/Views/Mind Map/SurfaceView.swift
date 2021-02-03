@@ -28,7 +28,7 @@ struct SurfaceView: View {
             
             GeometryReader { geometry in
                 ZStack {
-                    Rectangle().fill(Color.yellow)
+                    Rectangle().fill(Color.black).opacity(0.1)
                     MapView(selection: self.selection, mesh: self.mesh)
                         .offset(x: self.portalPosition.x + self.dragOffset.width, y: self.portalPosition.y + self.dragOffset.height)
                         .animation(.easeIn)
